@@ -1,0 +1,18 @@
+var _user$project$Demo$Track = F2(
+	function (a, b) {
+		return {title: a, duration: b};
+	});
+var _user$project$Demo$shortestTrack = function (trackList) {
+	var sortedList = A2(
+		_elm_lang$core$List$sortBy,
+		function (_) {
+			return _.duration;
+		},
+		trackList);
+	var _p0 = _elm_lang$core$List$head(sortedList);
+	if (_p0.ctor === 'Just') {
+		return _p0._0;
+	} else {
+		return A2(_user$project$Demo$Track, '', 0);
+	}
+};
